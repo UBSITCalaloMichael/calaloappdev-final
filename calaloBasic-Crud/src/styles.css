@@ -11655,8 +11655,34 @@ div.a{
    animation: textclip 2s linear infinite;
    display: inline-block;
        font-size: 100px;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
        font-style: italic;
         text-align: center;
+        margin-left: 100px;
+ }
+ .home1
+  {
+  text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #e0ffeb 0%,
+     #96ffbb 29%,
+     #4aff8a 67%,
+     #0ffc63 100%
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 300% auto;
+   color: #fff;
+   background-clip: text;
+   text-fill-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+       font-size: 100px;
+      text-align: center;
+      margin-left: 200px;
  }
  
  @keyframes textclip {
