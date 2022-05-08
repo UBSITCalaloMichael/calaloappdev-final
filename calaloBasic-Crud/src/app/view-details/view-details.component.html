@@ -1,0 +1,23 @@
+<section class="get-in-touch">
+    <h1 class="viewdetials">VIEW DETAILS</h1>
+    <div class="container">
+        <span class="list-group" *ngIf="selectedProduct">
+            <div class="card bg-light mb-3">
+                <div class="card-header ">Product ID: {{selectedProduct.id}}</div>
+                <div class="card-body">
+                    <h3 class="animate-charcter">{{selectedProduct.pname}}</h3>
+                    <h4 class="card-title text-dark">₱ {{selectedProduct.pprice}}</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">{{selectedProduct.type}}</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Stock Available: {{selectedProduct.stock}}</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">{{selectedProduct.pfrom}}</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">{{selectedProduct.powner}}</li>
+                    </ul>
+                    <a routerLink="/viewlists" class="card-link text-dark">View List</a>
+                    <a routerLink="/contactseller/{{selectedProduct.id}}" class="card-link text-dark">Contact Seller</a>
+                </div>
+    
+            </div>
+        </span>
+    </div>
+    </section>
