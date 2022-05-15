@@ -35,4 +35,15 @@ export class ViewDetailsComponent implements OnInit {
     this.productService.getProduct(id)
     .subscribe(product => this.product=product);
   }
+
+  goBack(): void{
+    this.location.back();
+  }
+
+  save(): void{
+    if(this.product){
+      this.productService.updateProduct(this.product)
+      .subscribe(()=>this.goBack());
+    }
+  }
 }

@@ -14,9 +14,9 @@ export class ViewListsComponent implements OnInit {
   products: Product[]=[];
   
   selectProduct?: Product;
-    onSelect(product: Product): void{
+ /*    onSelect(product: Product): void{
     this.selectProduct = product;
-    }
+    } */
 
   constructor(
     //provider to access url parameter
@@ -36,4 +36,23 @@ export class ViewListsComponent implements OnInit {
   
   }
 
+  add(email:string):void{
+    email=email.trim();
+    if(!email){return;}
+    this.productService.addProduct({email} as Product)
+    .subscribe(product => {
+      this.products.push(product);
+    });
+  }
+
+  delete(product:Product): void{
+    this.confirmDelete();
+    this.products = this.products.filter(p => p !== product);
+    this.productService.deleteProduct(product.id)
+    .subscribe();
+  }
+
+  confirmDelete(){
+    alert('Are you sure you want to delete this account?');
+  }
 }

@@ -15,7 +15,10 @@ export class ContactSellerComponent implements OnInit {
   /* products = PRODUCTS; */
   @Input()product?:Product;
 
-  /* selectedProduct?: Product; */
+   selectProduct?: Product; 
+   onSelect(product:Product):void{
+     this.selectProduct = product;
+   }
 
   constructor(
     private route: ActivatedRoute,

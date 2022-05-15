@@ -6,4 +6,7 @@ export interface Product{
     pprice: number;
     pfrom: string;
     powner: string;
+    email: string;
+    mobnum: string;
+
 }

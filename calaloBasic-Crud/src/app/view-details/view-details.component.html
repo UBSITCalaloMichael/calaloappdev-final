@@ -5,13 +5,42 @@
             <div class="card bg-light mb-3">
                 <div class="card-header ">Product ID: {{product.id}}</div>
                 <div class="card-body">
-                    <h3 class="animate-charcter">{{product.pname}}</h3>
-                    <h4 class="card-title text-dark">₱ {{product.pprice}}</h4>
+                    <h3 class="animate-charcter">{{product.pname}}
+                        <input type="text" class="form-control" id="inputpn" [(ngModel)]="product.pname">
+                    </h3>
+                    <li class="list-group-item d-flex justify-content-between align-items-center"></li>
+                    <h4 class="animate-charcter">₱ {{product.pprice}}
+                        <input type="text" class="form-control" id="inputprice" [(ngModel)]="product.pprice">
+                    </h4>
                     <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">{{product.type}}</li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">Stock Available: {{product.stock}}</li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">{{product.pfrom}}</li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">{{product.powner}}</li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 col-form-label">Product Type: </label>
+						    <input type="text" class="form-control" id="inputtype" placeholder="Item Type" [(ngModel)]="product.type">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 col-form-label">Stock Available: </label>
+						<input type="text" class="form-control" id="inputstock" placeholder="stocks" [(ngModel)]="product.stock">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 col-form-label">FROM</label>
+						    <input type="text" class="form-control" id="inputfn" placeholder="First name" [(ngModel)]="product.pfrom">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 col-form-label">Owner Name</label>
+						    <input type="text" class="form-control" id="inputfn" placeholder="First name" [(ngModel)]="product.powner">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 cp;-form-label">Email</label>
+                            <input type="text" class="form-control" id="inputemail" placeholder="Email" [(ngModel)]="product.email">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 cp;-form-label">Mobile Number</label>
+                            <input type="text" class="form-control" id="inputmob" placeholder="Mobile number" [(ngModel)]="product.mobnum">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label for="inputtel" class="col-sm-6 col-form-label"></label>
+                            <button type="button" class="col-sm-2 btn btn-success"(click)="save()">Save</button>
+                        </li>
                     </ul>
                     <a routerLink="/viewlists" class="card-link text-dark">View List</a>
                     <a routerLink="/contactseller/{{product.id}}" class="card-link text-dark">Contact Seller</a>

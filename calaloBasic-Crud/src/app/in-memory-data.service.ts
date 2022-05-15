@@ -1,7 +1,14 @@
-import { Product } from "./product";
+import { Injectable } from '@angular/core';
+import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { Product } from './product';
 
-export const PRODUCTS: Product[]=[
-    {
+@Injectable({
+  providedIn: 'root'
+})
+export class InMemoryDataService {
+  createDb(){
+    const products = [
+      {
         id: 1001,
         pname: 'JBL',
         type: 'Speaker',
@@ -56,4 +63,13 @@ export const PRODUCTS: Product[]=[
         email:'',
         mobnum:''
     }
-]
+    ];
+    return {products}
+  }
+
+  generatedId(products:Product[]): number{
+    return products.length > 0 ? Math.max(...products.map(product => product.id)) + 1 : 1001;
+  }
+
+  constructor() { }
+}

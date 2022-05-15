@@ -1,19 +1,31 @@
 <section class="viewlist">
     <div class="container">
+      <form class="p-4 p-md-5 border rounded-3 bg-dark">
+        <h3 class="viewdetials">Enter your Email to add product.</h3>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" #userEmail>
+          <label for="floatingInput">Email Address</label>
+        </div>
+        <button class="w=100 btn btn-lg btn-success" type="submit" (click)="add(userEmail.value); userEmail.value=''" >Add new</button>
+      </form>
     <table class="table table-hover">
       <thead>
         <tr>
           <th  class="list" scope = "col">ID</th>
           <th  class="list" scope = "col">Name</th>
+          <th  class="list" scope = "col">Price</th>
           <th  class="list" scope = "col">Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr class="table-active" *ngFor="let product of products">
-            <td class="list">{{product.id}}</td>
+          <td class="list">{{product.id}}</td>
           <th class="list" scope = "col">{{product.pname}}</th>
-          <td><a routerLink="/viewdetails/{{product.id}}">View Details</a></td>
-          <td></td>
+          <td class="list">₱ {{product.pprice}}</td>
+          <td>
+            <button type="button" class="w=100 btn btn-lg btn-success" routerLink="/viewdetails/{{product.id}}">View Details</button>
+            <button type="button" class="w=100 btn btn-lg btn-danger" (click)="delete(product)">Delete</button>
+          </td>
         </tr>
       </tbody>
     </table>
