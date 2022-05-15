@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="jumbotron" *ngIf="selectedProduct">
+    <div class="jumbotron" *ngIf="product">
         <section class="get-in-touch">
         
         <a routerLink="/viewlists" class="text-decoration-none">Back To View List</a>
@@ -7,7 +7,7 @@
         <h1 class="title">Good Day!</h1>
         
         <div class="a">
-        <p class="lead">I am interested in your <a routerLink="/viewdetails/{{selectedProduct.id}}" class="text-decoration-none">{{selectedProduct.pname}}</a> with Product ID: <a routerLink="/viewdetails/{{selectedProduct.id}}" class="text-decoration-none">{{selectedProduct.id}}</a>. How do i send my order? </p>
+        <p class="lead">I am interested in your <a routerLink="/viewdetails/{{product.id}}" class="text-decoration-none">{{product.pname}}</a> with Product ID: <a routerLink="/viewdetails/{{product.id}}" class="text-decoration-none">{{product.id}}</a>. How do i send my order? </p>
         </div>
         <hr class="my-4">
         

@@ -2,7 +2,7 @@ import { Product } from "./product";
 
 export const PRODUCTS: Product[]=[
     {
-        id: '0001',
+        id: 1001,
         pname: 'JBL',
         type: 'Speaker',
         stock: 99,
@@ -11,7 +11,7 @@ export const PRODUCTS: Product[]=[
         powner: 'Michael Calalo'
     },
     {
-        id: '0002',
+        id: 1002,
         pname: 'Relx Infinity Device',
         type: 'Pod',
         stock: 99,
@@ -20,7 +20,7 @@ export const PRODUCTS: Product[]=[
         powner: 'Michael Calalo'
     },
     {
-        id: '0003',
+        id: 1003,
         pname: 'Secure Console',
         type: 'Console',
         stock: 99,
@@ -29,7 +29,7 @@ export const PRODUCTS: Product[]=[
         powner: 'Michael Calalo'
     },
     {
-        id: '0004',
+        id: 1004,
         pname: 'VIVO Y91',
         type: 'Phone',
         stock: 99,
@@ -38,7 +38,7 @@ export const PRODUCTS: Product[]=[
         powner: 'Michael Calalo'
     },
     {
-        id: '0005',
+        id: 1005,
         pname: 'Iphone 6S',
         type: 'Phone',
         stock: 99,
