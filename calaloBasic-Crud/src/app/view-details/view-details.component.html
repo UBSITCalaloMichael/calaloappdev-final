@@ -5,12 +5,11 @@
             <div class="card bg-light mb-3">
                 <div class="card-header ">Product ID: {{product.id}}</div>
                 <div class="card-body">
-                    <h3 class="animate-charcter">{{product.pname}}
-                        <input type="text" class="form-control" id="inputpn" [(ngModel)]="product.pname">
-                    </h3>
-                    <li class="list-group-item d-flex justify-content-between align-items-center"></li>
-                    <h4 class="animate-charcter">₱ {{product.pprice}}
-                        <input type="text" class="form-control" id="inputprice" [(ngModel)]="product.pprice">
+                    <h4 class="animate-charcter"> 
+                        <input type="text" class="animate-charcter" id="inputpn" [(ngModel)]="product.pname">
+                    </h4>
+                    <h4 class="animate-charcter">₱ 
+                        <input type="text" class="animate-charcter" id="inputprice" [(ngModel)]="product.pprice">
                     </h4>
                     <ul class="list-group">
                         <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -23,7 +22,7 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <label class="col-sm-2 col-form-label">FROM</label>
-						    <input type="text" class="form-control" id="inputfn" placeholder="First name" [(ngModel)]="product.pfrom">
+						    <input type="text" class="form-control" id="inputfn" placeholder="from" [(ngModel)]="product.pfrom">
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <label class="col-sm-2 col-form-label">Owner Name</label>
