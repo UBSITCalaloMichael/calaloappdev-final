@@ -27,15 +27,15 @@ export const PRODUCTS: Product[]=[
     },
     {
         id: 1003,
-        pname: 'Secure Console',
-        type: 'Console',
+        pname: 'one piece phone cases',
+        type: 'Phone Case',
         stock: 99,
         pprice: 499.00,
         pfrom: 'Baguio City, Benguet',
         powner: 'Michael Calalo',
         email:'',
         mobnum:'',
-        pimg: ''
+        pimg: '../../assets/IMAGE/case.jpg'
     },
     {
         id: 1004,
