@@ -36,10 +36,10 @@ export class ViewListsComponent implements OnInit {
   
   }
 
-  add(email:string):void{
-    email=email.trim();
-    if(!email){return;}
-    this.productService.addProduct({email} as Product)
+  add(pname:string):void{
+    pname=pname.trim();
+    if(!pname){return;}
+    this.productService.addProduct({pname} as Product)
     .subscribe(product => {
       this.products.push(product);
     });

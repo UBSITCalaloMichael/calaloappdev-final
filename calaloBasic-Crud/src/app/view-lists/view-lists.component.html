@@ -1,12 +1,12 @@
 <section class="viewlist">
     <div class="container">
       <form class="p-4 p-md-5 border rounded-3 bg-dark">
-        <h3 class="viewdetials">Enter your Email to add product.</h3>
+        <h3 class="viewdetials">Enter Name of a Product</h3>
         <div class="form-floating mb-3">
           <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" #userEmail>
-          <label for="floatingInput">Email Address</label>
+          <label for="floatingInput">Product name</label>
         </div>
-        <button class="w=100 btn btn-lg btn-success" type="submit" (click)="add(userEmail.value); userEmail.value=''" >Add new</button>
+        <button class="w=100 btn btn-lg btn-success" type="submit" (click)="add(userEmail.value); userEmail.value=''" >Add Product</button>
       </form>
     <table class="table table-hover">
       <thead>
