@@ -17,7 +17,8 @@ export class InMemoryDataService {
         pfrom: 'Baguio City, Benguet',
         powner: 'Michael Calalo',
         email:'',
-        mobnum:''
+        mobnum:'',
+        pimg: '../../assets/IMAGE/jbl.jpg',
     },
     {
         id: 1002,
@@ -28,7 +29,8 @@ export class InMemoryDataService {
         pfrom: 'Baguio City, Benguet',
         powner: 'Michael Calalo',
         email:'',
-        mobnum:''
+        mobnum:'',
+        pimg: '../../assets/IMAGE/relx.jpg'
     },
     {
         id: 1003,
@@ -50,7 +52,8 @@ export class InMemoryDataService {
         pfrom: 'Baguio City, Benguet',
         powner: 'Michael Calalo',
         email:'',
-        mobnum:''
+        mobnum:'',
+        pimg: '../../assets/IMAGE/vivo.jpg'
     },
     {
         id: 1005,
@@ -61,7 +64,8 @@ export class InMemoryDataService {
         pfrom: 'Baguio City, Benguet',
         powner: 'Michael Calalo',
         email:'',
-        mobnum:''
+        mobnum:'',
+        pimg: '../../assets/IMAGE/iphone.jpg'
     }
     ];
     return {products}
