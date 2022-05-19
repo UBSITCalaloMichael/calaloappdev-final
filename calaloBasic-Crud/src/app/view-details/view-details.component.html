@@ -5,6 +5,11 @@
             <div class="card bg-light mb-3">
                 <div class="card-header ">Product ID: {{product.id}}</div>
                 <div class="card-body">
+                    
+                    <label for="exampleFormCotrolFile1" class="col-sm-2 col-from-label centerit animate-charcter">Photo</label>
+                    <img src="{{product.pimg}}" class="centerit" alt="...">
+                    <input type="file" class="form-control-file btn btn-success centerit" id="exampleFormCotrolFile1">
+
                     <h4 class="animate-charcter"> 
                         <input type="text" class="animate-charcter" id="inputpn" [(ngModel)]="product.pname">
                     </h4>

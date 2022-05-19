@@ -11684,6 +11684,13 @@ div.a{
       text-align: center;
       margin-left: 200px;
  }
+
+ .centerit{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+ }
  
  @keyframes textclip {
    to {

@@ -8,5 +8,6 @@ export interface Product{
     powner: string;
     email: string;
     mobnum: string;
+    pimg: string;
 
 }
