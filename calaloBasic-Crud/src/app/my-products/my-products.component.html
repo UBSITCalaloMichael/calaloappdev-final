@@ -1,1 +1,29 @@
-<p>my-products works!</p>
+<section class="viewlist">
+    <div class="container">
+    <h1 class="viewdetials">EDIT YOUR PRODUCT</h1>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th  class="list" scope = "col">Name</th>
+          <th  class="list centerit" scope = "col">Photo</th>
+          <th  class="list" scope = "col"></th>
+          <th  class="list" scope = "col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active" *ngFor="let product of products">
+            <th class="list" scope = "col">{{product.pname}}</th>
+          <td class="list">
+          <img src="{{product.pimg}}" class="centerit" alt="...">
+          </td>
+          <th class="list" scope = "col"></th>
+          <td>
+            <button type="button" class="w=100 btn btn-lg btn-success" routerLink="/editproduct/{{product.id}}">EDIT PRODUCT</button>
+            <button type="button" class="w=100 btn btn-lg btn-secondary" (click)="delete(product)">REMOVE</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</section>
+    

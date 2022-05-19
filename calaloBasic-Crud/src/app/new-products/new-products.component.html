@@ -1,1 +1,24 @@
-<p>new-products works!</p>
+<section class="viewlist">
+    <div class="container">
+    <h1 class="viewdetials">NEW ITEM</h1>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th  class="list" scope = "col">Name</th>
+          <th  class="list" scope = "col">Price</th>
+          <th  class="list centerit" scope = "col">Photo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active" *ngFor="let product of products">
+          <th class="list" scope = "col">{{product.pname}}</th>
+          <td class="list">₱ {{product.pprice}}</td>
+          <td>
+            <img src="{{product.pimg}}" class="centerit" alt="...">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</section>
+    

@@ -11686,9 +11686,18 @@ div.a{
  }
 
  .centerit{
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+ }
+ .centertext{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 30%;
+ }
+
+ .myprod{
   width: 30%;
  }
  

@@ -1,1 +1,55 @@
-<p>edit-product works!</p>
+<section class="get-in-touch">
+    <h1 class="viewdetials">EDIT YOUR PRODUCT</h1>
+    <div class="container">
+        <span class="list-group" *ngIf="product">
+            <div class="card bg-light mb-3">
+                <div class="card-header ">Product ID: {{product.id}}</div>
+                <div class="card-body">
+
+                    <label for="exampleFormCotrolFile1" class="col-sm-2 col-from-label centertext animate-charcter">Photo</label>
+                    <img src="{{product.pimg}}" class="centertext" alt="...">
+                    <input type="file" class="form-control-file btn btn-success centertext" id="exampleFormCotrolFile1">
+
+                    <h4 class="animate-charcter"> 
+                        <input type="text" class="animate-charcter" id="inputpn" [(ngModel)]="product.pname">
+                    </h4>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 col-form-label">Product Type: </label>
+						    <input type="text" class="form-control" id="inputtype" placeholder="Item Type" [(ngModel)]="product.type">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 col-form-label">Stock Available: </label>
+						<input type="text" class="form-control" id="inputstock" placeholder="stocks" [(ngModel)]="product.stock">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 col-form-label">Product Price</label>₱ 
+                        <input type="text" class="form-control" id="inputprice" [(ngModel)]="product.pprice"> 
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 col-form-label">Product Location</label>
+						    <input type="text" class="form-control" id="inputfn" placeholder="from" [(ngModel)]="product.pfrom">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 col-form-label">Owner Name</label>
+						    <input type="text" class="form-control" id="inputfn" placeholder="First name" [(ngModel)]="product.powner">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 cp;-form-label">Email</label>
+                            <input type="text" class="form-control" id="inputemail" placeholder="Email" [(ngModel)]="product.email">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <label class="col-sm-2 cp;-form-label">Mobile Number</label>
+                            <input type="text" class="form-control" id="inputmob" placeholder="Mobile number" [(ngModel)]="product.mobnum">
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <button type="button" class="col-sm-2 btn btn-success"(click)="goBack()">Back</button>
+                            <button type="button" class="col-sm-2 btn btn-success"(click)="save()">Save</button>
+                        </li>
+                    </ul>
+                </div>
+    
+            </div>
+        </span>
+    </div>
+    </section>
